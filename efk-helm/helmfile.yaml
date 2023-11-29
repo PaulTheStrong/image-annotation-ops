@@ -1,0 +1,18 @@
+repositories:
+  - name: elastic
+    url: https://helm.elastic.co
+
+releases:
+  - name: elasticsearch
+    namespace: efk
+    chart: elastic/elasticsearch
+    version: 8.5.1
+    values:
+      - values-elasticsearch.yaml
+  - name: kibana
+    namespace: efk
+    chart: elastic/kibana
+    version: 8.5.1
+    values:
+      - values-kibana.yaml
+
